@@ -1,0 +1,276 @@
+/*GENERALS*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Smythe", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: grey;
+}
+
+.container {
+    position: relative;
+    max-width: 37.5rem;
+    background-color:#ffffff;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* @media (min-width: 768px){
+    .container{
+        max-width: none;
+    }
+} */
+
+/*HEADER*/
+
+header {
+    padding: 40px;
+    background-image: url(img/bg\ img.png);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.4rem;
+}
+
+/*MAIN*/
+main{
+    margin: 10px 40px;
+}
+
+.component {
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+    border-bottom: 1px solid #D2D2D2;
+    gap: 10px;
+}
+
+.product__emoji{
+    font-size: 4rem;
+}
+
+.product__main{
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.product__title{
+    font-size: 1.75rem;
+}
+
+.product__ingredients{
+    font-size: 1rem;
+    color: #8B8B8B;
+}
+
+.product__price{
+    font-size: 1.25rem;
+}
+
+.product__btn{
+    color: #3C3C3C;
+    background: #FFFFFF;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    border: 2px solid #DEDEDE;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* STYLE BTN SOLUTION
+height: 50px;
+width: 50px;
+border: 2px solid grey;
+border-radius: 50%;
+background-color: #ffffff;
+font-size: 1.25rem; */
+
+.product__btn:hover{
+    background: #F3F4F6;
+}
+
+
+/*ORDER*/
+
+/* al div contenitore .order do il css principale, cioe display e margin */
+.order{
+    display: block;
+    margin: 40px;
+}
+
+.order__heading{
+    margin-bottom: 2.5rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.order__paragraph, .total{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.75rem;
+}
+
+span, .remove{
+    border-bottom: 1.5rem;
+    display: inline-block;
+    font-size: 1.25rem;
+}
+
+.remove{
+    border: none;
+    margin-right: auto;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background: #16DB99;
+    padding: 2px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/*TOTAL*/
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    border-top: 1px solid #393333;
+    padding-top: 0.5em;
+
+}
+
+.total__ground{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.total__price{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.complete__order{
+    text-align: center;
+}
+
+.complete__btn-order{
+    background-color: #16DB99;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 40px;
+    padding: 25px 150px;
+    cursor: pointer;
+}
+
+.complete__btn-order:hover,
+.remove:hover{
+    background-color: #16CA8E;
+}
+
+/*MODAL*/
+
+.modal{
+    position:absolute;
+    top: 14rem;
+    right: 0;
+    left: 0;
+
+    width: 90%;
+    margin: 0 auto;
+    background-color:#eee0e0;
+    padding: 3rem;
+    box-shadow: 1px 1px 50px black;
+    display: none;
+}
+
+.close__modal-btn{
+    font-family: "Smythe", system-ui, sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    padding: 5px;
+    background: none;
+    border-radius: 0.25em;
+}
+
+.close__modal-btn:hover{
+    background: #E5D0D0;
+}
+
+.form__modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__heading{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.form__modal input {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 0.25em;
+    -moz-appeareance: none;
+}
+
+.make__payment{
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 1rem;
+    background-color: #16DB99;
+    border: none;
+    cursor: pointer;
+}
+
+.make__payment:hover{
+    background-color: #16CA8E;
+}
+
+.error__sms{
+    color: rgb(169, 10, 10);
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 0.5em;
+}
+
+/*THANK YOU MSG*/
+
+.success__sms{
+    text-align: center;
+    color: #065F46;
+    font-size: 1.5em;
+    background: #ECFDF5;
+    padding: 25px 20px;
+    border-radius: 0.2em;
+    width: 70%;
+    margin: 10px auto;
+}

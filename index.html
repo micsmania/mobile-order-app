@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Order App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..   900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="banner">
+            <h1>Jimmy's Dinner</h1>
+            <p>The best burgers and pizzas in town</p>
+        </header>
+
+        <main class="main__section" id="main__menu">
+            <!-- main section -->
+        </main>
+
+        <!-- ORDER START -->
+        <div class="order hidden" id="order">
+            <!-- order section -->
+        </div>
+        <!-- ORDER END -->
+        <!-- TOTAL ORDER START -->
+        <div class="hidden" id="total__order">
+            <p class="total" id="total">
+                <span class="total__ground">Total price:</span>
+                <span class="total__price" id="total__price">$100.00</span>
+            </p>
+            <div class="complete__order hidden" id="complete__order">
+                <button class="complete__btn-order btn__order" id="btn__order">
+                    Complete Order
+                </button>
+            </div>
+        </div>
+        <!-- TOTAL ORDER END -->
+
+        <!-- MODAL START -->
+        <div class="modal" id="modal">
+            <button class="close__modal-btn" id="modal__close__btn">X</button>
+            <form class="form__modal">
+                <h2 class="form__heading">Enter Card details</h2>
+                <input id="cardName" type="text" placeholder="Enter your name" required>
+                <input id="cardNumber" type="number" placeholder="Enter card number" required>
+                <input id="cardCvv" type="number" placeholder="Enter CVV" required>
+                <button type="submit" class="make__payment submit-btn" id="submit-btn">Pay</button>
+            </form>
+            <div class="error__sms" id="error__sms"></div>
+        </div>
+        <!-- MODAL END -->
+
+        <div class="success__sms hidden" id="success__sms"></div>
+
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
